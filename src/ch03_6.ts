@@ -4,10 +4,9 @@ liveRoomName = 80667
 liveRoomName = 'live88769'
 
 // never =>永遠不可能發生的類型
-// let liveRoomName2: string | number ;
-// liveRoomName2 = 'ABC123'
-// liveRoomName2 = 106888
-
+let liveRoomName2: string | number ;
+liveRoomName2 = 'ABC123'
+liveRoomName2 = 106888
 // if(typeof liveRoomName === 'string'){
 //   liveRoomName2.split() // 一定只會是數字
 // }
