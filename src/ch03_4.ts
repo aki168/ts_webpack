@@ -9,9 +9,9 @@ memberData = {
   phoneNumber:0988000222
 }
 
-type memberData2 = {name: string, mail: string, password: string, age?:number, phoneNumber?:number}
+type MemberData2 = {name: string, mail: string, password: string, age?:number, phoneNumber?:number}
 
-const satoshi:memberData2= {
+const satoshi: MemberData2= {
   name:"satoshi",
   mail:"sato@mail.com",
   password:"ss0f4",
