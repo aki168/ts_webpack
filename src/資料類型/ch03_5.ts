@@ -3,7 +3,7 @@ let name1:unknown = 'David'
 name1 = 888
 
 // 斷言 as 的用法
-//不確定的狀況下 讓TS強制知道他的型別
+// 不確定的狀況下 讓TS強制知道他的型別
 let name2:unknown = 'Mike'
 let name3 = name2 as string
 
