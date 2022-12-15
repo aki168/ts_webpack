@@ -1,1 +1,1 @@
-import './OOP/ch06_5'
+import './OOP/ch06_6'
