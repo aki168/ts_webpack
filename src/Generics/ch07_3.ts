@@ -44,7 +44,7 @@ type result = TT73_3<'Aki'>
 
 
 // union & 泛型用法 [注意陷阱]
-type TT73_4 = 'Aki' | 'Aki2' extends 'Aki' ? string : boolean //boolean
+type TT73_4 = 'Aki' | 'Aki2' extends 'Aki' ? string : boolean // boolean
 
 type TT73_5<T> = T extends 'Aki' ? string : boolean
 type res = TT73_5<'Aki'|'Aki2'>  // string | boolean 
@@ -54,13 +54,13 @@ type res = TT73_5<'Aki'|'Aki2'>  // string | boolean
 // 2. 'Aki2' -> T = boolean
 // 會把所有結果收集起來，相對應變成一個 union 後回傳
 type TT73_42<T> = [T] extends ['Aki'] ? string : boolean
-type res2 = TT73_42<'Aki'|'Aki2'>  
+type res2 = TT73_42<'Aki'|'Aki2'>  // boolean
 // ↑若想讓值同 T73_4 的話，可把判斷元素用[]框住
 
 
 
-// 一班來說 never 是 「所有類型」 的子類別
-type TT73_6 = never  extends 'Aki' ? string : boolean
+// 一般來說 never 是 「所有類型」 的子類別
+type TT73_6 = never extends 'Aki' ? string : boolean
 // 若用泛型表示: never 會被看作為一個「空的 union」
 type TT73_7<T> = T extends 'Aki' ? string : boolean
 type res3 = TT73_7<never> // 將不會回傳任何東西，若想讓他回傳型別，一樣可把判斷元素用[]框住
