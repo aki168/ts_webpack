@@ -2,12 +2,28 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
+
+    // 8-3 --------------start-----------------
+
     "module": "es6",
     "target": "ES2021",
+    "moduleResolution": "node", // 引入的路徑設定
+    // 相容性處理設定:
+    "esModuleInterop":true, // 可使 commonJS做的舊套件，也能以es6 的方式被引用
+    "allowSyntheticDefaultImports": false,  // 可使 commonJS做的舊套件，也能以es6 的方式被引用
+    
+    // 8-3 -------------- end -----------------
+
     "jsx": "react",
     "allowJs": true,
-    "moduleResolution": "node",
     "sourceMap": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+
+    // 告別冗長的路徑 -----------------
+    "baseUrl": "./src", 
+    "paths": {
+      "@/*":["*"]
+    }
   }
 }
+// TS-loader : 官方強烈建議不要用commonJS, 不會做 tree shacking
